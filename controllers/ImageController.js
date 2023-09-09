@@ -26,11 +26,11 @@ module.exports.uploadImage = async (req, res) => {
 
     for (const file of files.file) {
         const ext = file.originalFilename.split('.').pop();
-        // const allowed = ['jpg', 'jpeg', 'png'];
+        const allowed = ['jpg', 'jpeg', 'png'];
 
-        // if(!allowed.includes(ext)) {
-        //     return res.status(400).json({error: 'Must upload JPEG or PNG file.'});
-        // }
+        if(!allowed.includes(ext)) {
+            return res.status(400).json({error: 'Must upload JPEG or PNG file.'});
+        }
 
         const newFileName = Date.now() + '.' + ext;
         
