@@ -16,7 +16,7 @@ const searchRoutes = require('./routes/SearchRoutes');
 
 //middleware functions
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://twitter-x-clone-9g7q.onrender.com'],
     method: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
