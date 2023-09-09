@@ -18,7 +18,8 @@ const searchRoutes = require('./routes/SearchRoutes');
 app.use(cors({
     origin: ['http://localhost:3000', 'https://twitter-x-clone-app.onrender.com'],
     method: ['GET', 'POST', 'PATCH', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
 }));
 
 app.use(express.json());
